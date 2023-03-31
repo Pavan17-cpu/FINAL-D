@@ -26,7 +26,6 @@
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
     "paypal": "^1.0.1",
-    "paytm-blink-checkout-react": "^0.0.3",
     "paytm-nodejs": "^1.0.0",
     "popper.js": "^1.16.1",
     "razorpay": "^2.8.6",
