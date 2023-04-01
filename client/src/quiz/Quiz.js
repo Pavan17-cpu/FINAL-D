@@ -11,46 +11,46 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function Quiz(){
     var Questionbank = [
         {
-            Question: " What is the purpose of a car rental management system?",
+            Question: "What is a room rental?",
             Answers: [
-                { Answer: "To buy new cars", isCorrect:false  },
-                { Answer: " To manage customer reservations and bookings", isCorrect: true },
-                { Answer: "To set rental rates and revenue", isCorrect: false },
-                { Answer: "ALL", isCorrect: false}
+                { Answer: " Renting an entire apartment or house", isCorrect:false  },
+                { Answer: "Renting a single room in someone's home", isCorrect: true },
+                { Answer: "Renting a hotel room", isCorrect: false },
+                { Answer: "Renting a car", isCorrect: false}
             ]
         },
         {
-            Question: "Which of the following is NOT a typical feature of a car rental management system?",
+            Question: "Who can benefit from renting a room?",
             Answers: [
-                { Answer: "Online booking portal for customers", isCorrect: false },
-                { Answer: "Real-time tracking of car locations and availability", isCorrect:false },
-                { Answer: "Automatic maintenance scheduling for rental cars", isCorrect: false },
-                { Answer: "Social media marketing tools for promoting the car rental service", isCorrect: true }
+                { Answer: "Students", isCorrect: false },
+                { Answer: "Travelers ", isCorrect:false },
+                { Answer: "People relocating for work", isCorrect: false },
+                { Answer: " All of the above", isCorrect: true }
             ]
         }, {
-            Question: "What is the benefit of using a car rental management system for customers?",
+            Question: "What are some benefits of renting a room?",
             Answers: [
-                { Answer: "Faster and more convenient booking process", isCorrect: true },
-                { Answer: "cars are not in condition", isCorrect: false },
-                { Answer: " high pricing and rental terms", isCorrect: false },
-                { Answer: "All of the above", isCorrect: false }
-            ]
-        },
-        {
-            Question: "How can a car rental management system help a rental car company improve its business operations?",
-            Answers: [
-                { Answer: "By providing real-time data and insights on rental car usage and customer behavior", isCorrect: true },
-                { Answer: "By automating routine tasks such as vehicle maintenance and payment processing", isCorrect: false },
-                { Answer: " By improving customer satisfaction and loyalty through a more streamlined rental experience", isCorrect: false },
+                { Answer: "Flexibility ", isCorrect: false },
+                { Answer: "Affordability ", isCorrect: false },
+                { Answer: "Shared expenses ", isCorrect: false },
                 { Answer: "All of the above", isCorrect: true }
             ]
         },
         {
-            Question: "Which of the following is a potential challenge when implementing a car rental management system?",
+            Question: "What is a potential downside of renting a room?",
             Answers: [
-                { Answer: "High initial cost of system implementation and training", isCorrect: false },
-                { Answer: " Difficulty in integrating the system with existing IT infrastructure ", isCorrect: false },
-                { Answer: "Concerns about data security and privacy", isCorrect: false },
+                { Answer: "Lack of privacy", isCorrect: false },
+                { Answer: " High cost", isCorrect: false },
+                { Answer: " Inflexibility", isCorrect: false },
+                { Answer: "All of the above", isCorrect: true }
+            ]
+        },
+        {
+            Question: "What is a potential benefit of renting a room in someone's home?",
+            Answers: [
+                { Answer: " Security", isCorrect: false },
+                { Answer: " Access to amenities like a kitchen or living room  ", isCorrect: false },
+                { Answer: " Opportunities for social interaction", isCorrect: false },
                 { Answer: " All of the above", isCorrect: true }
             ]
         }
@@ -100,12 +100,11 @@ const resetQuiz=()=>
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>How old do I need to be to rent a car?</Typography>
+          <Typography>How much should I expect to pay for renting a room?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          With many rental companies, you must be at least 21 years of age to rent a car, and any driver under 25 may have to pay a Young Driver Fee. Similarly, people aged 70+ may find some companies will charge a Senior Driver Fee, or may not rent to them at all.
-So car rental for the under-25s or over-70s can be more expensive – which is one more reason to book with Rentalcars.com, as we work with all the big brands. Just check each car’s terms and conditions to see if your age would make any difference.
+          The cost of renting a room can vary greatly depending on the location, size of the room, and included amenities. It's best to research the area and compare prices before making a decision.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -115,11 +114,11 @@ So car rental for the under-25s or over-70s can be more expensive – which is o
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Can I book a one-way car rental?</Typography>
+          <Typography>Is it normal to sign a lease agreement for renting a room?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Yes. One-way car rental deals are quite common, as they give people even more freedom to explore and enjoy their rental. However, rental companies will often charge a One Way Fee (or ‘drop charge’) to cover the cost of returning the car to its original location. As the world’s biggest online car rental service, we can help you find a one-way rental car with a low Fee – or no Fee at all.
+          Yes, it's common to sign a lease agreement even when renting a room in someone's home. The lease will outline the terms of the rental agreement, including the length of the lease, the rent amount, and any rules or restrictions.
           </Typography>
         </AccordionDetails>
         
@@ -131,12 +130,11 @@ So car rental for the under-25s or over-70s can be more expensive – which is o
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Do I need rental car insurance – and what is ‘CDW’ anyway?</Typography>
+          <Typography>What are some important things to look for when inspecting a room before renting it?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Before you buy any car rental insurance, you should find out what coverage is provided by your credit card company, your homeowner’s / renter’s policy, and your own car insurance. This will help you decide what cover you need to buy while booking and picking up your car.
-CDW means ‘Collision Damage Waiver’; a type of cover that limits your liability for damage to certain parts of a rental car.
+          Look for any damages or safety hazards such as cracked walls or loose floorboards. Make sure the room is clean and check that all appliances and fixtures are working properly. Also, check for any evidence of pests.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -147,14 +145,19 @@ CDW means ‘Collision Damage Waiver’; a type of cover that limits your liabil
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>How do I find the cheapest car rental deals?</Typography>
+          <Typography>Can I negotiate the rent for a room?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          As the world’s biggest online car rental service, we specialize in finding the cheapest car rental deals from major brands such as Hertz, Avis, Alamo, and Budget. Daily, weekly, or monthly car rentals… just fill in our search form to compare deals from different companies – and find out how much you can save when you rent a car from us.
+          Yes, it's possible to negotiate the rent for a room, especially if you're renting from an individual rather than a rental agency. However, be sure to approach the negotiation in a respectful and reasonable manner.
           </Typography>
         </AccordionDetails>
       </Accordion>
+
+      
+
+      </div>
+      
       
         <div className='actd'>
             {showScore ? (
@@ -191,7 +194,7 @@ CDW means ‘Collision Damage Waiver’; a type of cover that limits your liabil
 
         </div>
         </div>
-        </div>
+        
         
     );
 }
