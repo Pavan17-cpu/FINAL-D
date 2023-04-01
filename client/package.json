@@ -25,30 +25,30 @@
         "emailjs": "^4.0.1",
         "jquery": "^3.6.0",
         "moment": "^2.29.1",
-        "paypal": "^1.0.1",
-        "paytm-blink-checkout-react": "^0.0.3",
-        "paytm-nodejs": "^1.0.0",
+        
+        
+        
         "popper.js": "^1.16.1",
         "razorpay": "^2.8.6",
         "react": "^17.0.2",
         "react-bootstrap": "^1.6.0",
-        "react-chartjs-2": "^5.2.0",
+        
         "react-credit-cards": "^0.8.3",
         "react-credit-cards-2": "^0.10.0",
         "react-date-range": "^1.1.4",
         "react-dom": "^17.0.2",
-        "react-paypal-button-v2": "^2.6.3",
-        "react-razorpay": "^1.2.0",
+        
+        
         "react-redux": "^7.2.4",
         "react-responsive-carousel": "^3.2.18",
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.3",
         "react-spinners": "^0.11.0",
-        "react-stripe-checkout": "^2.6.3",
+        
         "reactstrap": "^9.1.6",
         "redux": "^4.1.0",
         "scrollmagic": "^2.0.8",
-        "stripe": "^7.0.0",
+        
         "styled-components": "^5.3.6",
         "sweetalert2": "^11.0.16",
         "sweetalert2-react": "^0.8.3",
