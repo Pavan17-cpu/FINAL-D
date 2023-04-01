@@ -18,8 +18,8 @@
     "uuid": "^8.3.2"
   },
   "engines": {
-    "node": "18.7.0",
-    "npm": "7.4.3"
+    "node": "18.13.0",
+    "npm": "8.19.3"
   },
   "scripts": {
   "client-install": "npm install --prefix client",
