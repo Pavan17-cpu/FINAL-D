@@ -20,9 +20,9 @@ h1{
   font-size: 20px !important;
 }
 .navbar{
-  background-color:rgb(247, 15, 185) !important;
+  background-color:black !important;
   border-radius: 0px !important;
-  box-shadow: rgba(189, 19, 101, 0.75) 0px 5px 15px;
+  box-shadow: black 0px 5px 15px;
 }
 .nav-link{
   color: white !important;
@@ -62,7 +62,7 @@ p{
   font-size: 16px !important;
 }
 .btn{ 
-  background-color:rgb(247, 15, 185) !important; 
+  background-color:black !important; 
   border-color: black !important;
 }
 
@@ -83,7 +83,7 @@ p{
 .landing{
   
   height:calc(100vh) !important;
-  background-color:rgb(247, 15, 185) !important;
+  background-color:black !important;
   
 }
 .landing .btn{
@@ -91,3 +91,12 @@ p{
   color:black !important;
   margin-top: 10px !important;
 }
+.progressBar {
+  height: 100%;
+  background-color: blue;
+}
+
+
+
+
+
