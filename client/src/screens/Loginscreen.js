@@ -12,12 +12,26 @@ export default function Loginscreen() {
   const [loading, setloading] = useState(false);
   const [error, seterror] = useState(false);
   const [success, setsuccess] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState("");
+  const [captchaInputValue, setCaptchaInputValue] = useState("");
+  const [captchaError, setCaptchaError] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem("currentUser")) {
       window.location.href = "/";
     }
+    // Generate a new captcha value on page load
+    generateCaptchaValue();
   }, []);
+
+  function generateCaptchaValue() {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let captcha = "";
+    for (let i = 0; i < 6; i++) {
+      captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    setCaptchaValue(captcha);
+  }
 
   async function login() {
     // Validate email
@@ -34,6 +48,12 @@ export default function Loginscreen() {
       return;
     }
 
+    // Validate captcha input
+    if (captchaInputValue !== captchaValue) {
+      setCaptchaError(true);
+      return;
+    }
+
     const user = {
       email,
       password,
@@ -47,6 +67,13 @@ export default function Loginscreen() {
       seterror(true);
       setloading(false);
       console.log(error);
+    }
+  }
+
+  function handleCaptchaInputChange(e) {
+    setCaptchaInputValue(e.target.value);
+    if (captchaError) {
+      setCaptchaError(false);
     }
   }
 
@@ -73,46 +100,53 @@ export default function Loginscreen() {
               value={email}
               onChange={(e) => {
                 setemail(e.target.value);
-              }}
-            />
-            <br />
-            <label>Password</label>
-            <input
-              type="password"
-              placeholder="password"
-              className="form-control mt-1"
-              value={password}
-              required
-              onChange={(e) => {
-                setpassword(e.target.value);
-              }}
-            />
-
-            <button
-              onClick={login}
-              className="btn btn-success mt-3 mb-3 rounded-pill"
-            >
-              LOGIN
-            </button>
-            <br />
-            <a
-              style={{ color: "black" }}
-              href="/register"
-              className="mt-2"
-            >
-              Click Here To Register
-            </a>
-            <br/>
-            <a
+              }}        />
+              </div>
+              <div>
+                <label>Password</label>
+                <input
+                  required
+                  type="password"
+                  placeholder="password"
+                  className="form-control mt-1"
+                  value={password}
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                  }}
+                />
+              </div>
+              <div>
+                <label>Enter Captcha: {captchaValue}</label>
+                <input
+                  required
+                  type="text"
+                  placeholder="enter captcha"
+                  className="form-control mt-1"
+                  value={captchaInputValue}
+                  onChange={handleCaptchaInputChange}
+                />
+              </div>
+              {captchaError && (
+                <div className="mt-2 text-danger">
+                  Invalid Captcha. Please try again.
+                </div>
+              )}
+              <button className="btn btn-success mt-3 mb-3 rounded-pill" onClick={login}>
+                LOGIN
+              </button>
+              <br/><br/>
+              <a href="/register">Click here to register</a><br/>
+              <a
               style={{ color: "black" }}
               href="/admin"
               className="mt-2"
             >
               Admin?
             </a>
+
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+        
   );
-}
+              }        
