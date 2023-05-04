@@ -1,6 +1,6 @@
 {
   "name": "rental",
-  "express": "^4.18.2",
+  
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
