@@ -5,7 +5,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "4.17.1",
     "@paypal/checkout-server-sdk": "^1.0.3",
     
      
