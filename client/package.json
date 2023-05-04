@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+          "express": "^4.18.2",
         "@babel/core": "^7.12.3",
         "@babel/preset-env": "^7.14.4",
         "@emailjs/browser": "^3.10.0",
