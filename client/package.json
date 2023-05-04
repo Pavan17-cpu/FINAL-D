@@ -28,7 +28,7 @@
         "moment": "^2.29.1",
         "popper.js": "^1.16.1",
         "razorpay": "^2.8.6",
-        "react": "^17.0.2",
+        "react": "^16.0.0",
         "react-bootstrap": "^1.6.0",
         "react-credit-cards-2": "^0.10.0",
         "react-csv": "^2.2.2",
@@ -44,7 +44,6 @@
         "scrollmagic": "^2.0.8",
         "styled-components": "^5.3.6",
         "sweetalert2": "^11.0.16",
-        "sweetalert2-react": "^0.8.3",
         "web-vitals": "^1.1.2"
     },
     "scripts": {
