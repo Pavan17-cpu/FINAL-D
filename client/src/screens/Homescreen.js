@@ -79,18 +79,19 @@ function Homescreen() {
     sethotels(dupdate)
   }
 
-  function filterByType(e)
-  {
-    settype(e)
-    if(e!=='all'){
-      const dupdate = duplicatehotes.filter(room=>room.type.toLowerCase().includes(e.toLowerCase()))
-      sethotels(dupdate)
+  function filterByType(e) {
+    settype(e);
+    if (e !== "all") {
+      const dupdate = duplicatehotes.filter(
+        (room) => room.type.toLowerCase() === e.toLowerCase()
+      );
+      sethotels(dupdate);
+    } else {
+      sethotels(duplicatehotes);
     }
-    else{
-      sethotels(duplicatehotes)
-    }
-   
   }
+  
+  
 
   return (
     <div className="mt-5">
@@ -115,7 +116,7 @@ function Homescreen() {
 
             <option value="all">All</option>
               <option value="delux">Delux</option>
-              <option value="non-delux">Non Delux</option>
+              <option value="non delux">Non Delux</option>
               
             </select>
           </div>
