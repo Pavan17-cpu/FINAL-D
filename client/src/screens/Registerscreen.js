@@ -12,6 +12,9 @@ export default function Registerscreen() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [progressPercentage, setProgressPercentage] = useState(0);
+  
 
   const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
@@ -23,6 +26,29 @@ export default function Registerscreen() {
     return passwordRegex.test(password);
   };
   
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    setProgress(25);
+    setProgressPercentage(25);
+  };
+  
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setProgress(50);
+    setProgressPercentage(50);
+  };
+  
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    setProgress(75);
+    setProgressPercentage(75);
+  };
+  
+  const handleCpasswordChange = (e) => {
+    setCpassword(e.target.value);
+    setProgress(100);
+    setProgressPercentage(100);
+  };
 
   const validateForm = () => {
     if (!name.trim()) {
@@ -76,59 +102,71 @@ export default function Registerscreen() {
           {loading && <Loader />}
           {success && <Success success={success} />}
           {error && <Error error={error} />}
+          {progressPercentage > 0 && (
+            <div className="progress">
+              <div
+  className="progressBar"
+  role="progressbar"
+  style={{ width: `${progressPercentage}%` }}
+  aria-valuenow={progress}
+  aria-valuemin="0"
+  aria-valuemax="100"
+></div>
 
-          <h2 className="text-center m-2" style={{ fontSize: "35px" }}>
-            Register
-          </h2>
-          <div>
-            <label>Name</label>
-            <input
-              required
-              type="text"
-              placeholder="name"
-              className="form-control mt-1"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <br />
-            <label>Email</label>
-            <input
-              required
-              type="email"
-              placeholder="email"
-              className="form-control mt-1"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <br />
-            <label>Password</label>
-            <input
-              type="password"
-              placeholder="password"
-              className="form-control mt-1"
-              value={password}
-              required
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <br />
-            <label>Confirm Password</label>
-            <input
-              type="password"
-              placeholder="confirm password"
-              className="form-control mt-1"
-              value={cpassword}
-              required
-              onChange={(e) => setCpassword(e.target.value)}
-            />
-            <button
-              onClick={register}
-              className="btn btn-primary rounded-pill mt-3 mb-3"
-            >
-              REGISTER
-              </button>
-    </div>
-  </div>
-</div>
-</div>
-  );
-}
+                </div>
+                )}
+                <h2 className="text-center">Register</h2>
+                <form>
+                <div className="form-group">
+                <label htmlFor="name">Name:</label>
+                <input
+                             type="text"
+                             className="form-control"
+                             id="name"
+                             placeholder="Enter name"
+                             value={name}
+                             onChange={handleNameChange}
+                           />
+                </div>
+                <div className="form-group">
+                <label htmlFor="email">Email address:</label>
+                <input
+                             type="email"
+                             className="form-control"
+                             id="email"
+                             placeholder="Enter email"
+                             value={email}
+                             onChange={handleEmailChange}
+                           />
+                </div>
+                <div className="form-group">
+                <label htmlFor="password">Password:</label>
+                <input
+                             type="password"
+                             className="form-control"
+                             id="password"
+                             placeholder="Enter password"
+                             value={password}
+                             onChange={handlePasswordChange}
+                           />
+                </div>
+                <div className="form-group">
+                <label htmlFor="cpassword">Confirm Password:</label>
+                <input
+                             type="password"
+                             className="form-control"
+                             id="cpassword"
+                             placeholder="Confirm password"
+                             value={cpassword}
+                             onChange={handleCpasswordChange}
+                           />
+                </div>
+                <button type="button" className="btn btn-primary" onClick={register}>
+                Submit
+                </button>
+                </form>
+                </div>
+                </div>
+                </div>
+                );
+                }
